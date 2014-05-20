@@ -1,0 +1,14 @@
+<div class="row feature">
+
+      <div class="col-md-5">
+        <img src="<%= @featured_product.image_url %>" alt="feat_prod image"> 
+      </div><!-- .col-md-5 -->
+
+      <div class="col-md-7">
+       <em><h2><small>Featured piece of clothing for the month, an original </small> <%= @featured_product.description %> <small> ,more info <%= link_to 'here', product_path(@featured_product) %> </small></h2> </em>
+      </div><!-- .col-md-7 -->
+    </div><!-- .row .feature -->  
+
+<hr>    
+
+

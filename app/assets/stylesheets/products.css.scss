@@ -1,0 +1,16 @@
+body {
+  font: normal medium/1.4 sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.25rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+tbody tr:hover {
+  background: #C0C0C0;
+}
+.container { margin: 50px auto; width: 80%; }
+hr { background: #ccc; border: 0; color: #ccc; height: 1px; margin: 25px 0; }

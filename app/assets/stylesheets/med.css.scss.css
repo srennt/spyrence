@@ -1,0 +1,38 @@
+html { font-size: 80%; }
+body { background-color: #fff; color: #444444; font-family: 'Roboto', sans-serif; font-size: 1.2rem; line-height: 1.5; }
+a { font-weight: bold; }
+a:link, a:visited { color: #444444; text-decoration: none; }
+a:hover, a:active { color: #444444; }
+.container { margin: 50px auto; width: 80%; }
+hr { background: #ccc; border: 0; color: #ccc; height: 1px; margin: 25px 0; }
+h1 { font-size: 4.0rem; }
+h1, h2 { font-family: 'Roboto', sans-serif; }
+p { text-align: center; }
+#logo { margin: 30px; }
+.frame { border: 10px solid #ccc; }
+.nav { float: right; list-style: none; margin: 0; padding: 0; }
+.nav li { display: inline; margin: 0 0 0 0; }
+.slide img { width: 100%; }
+.slide { max-height: 350px; overflow: hidden; }
+body { margin: 0; }
+
+.nav > li > a { display: inline; }
+
+#myCarousel { box-shadow: 0 7px 10px 3px rgba(0, 0, 0, 0.5); }
+#myCarousel .item { max-height: 400px; }
+#myCarousel .container { left: 0; position: absolute; top: 180px; }
+#myCarousel h1, #myCarousel p { color: black; margin: 0 auto; text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7); width: 70%; }
+#myCarousel img { width: 100%; }
+
+#accordion h2 { border-bottom: 1px solid #ddd; margin: 2em 0 1em 0; padding-bottom: 0.8em; text-align:left;}
+#accordion h2:first-child { margin-top: 0; }
+#accordion .panel { background: transparent; border: 0; box-shadow: none; margin-bottom: 1em; }
+#accordion .panel-body { background: #ddd; border-radius: 5px; margin-top: 1em; padding: 15px 1px; }
+#accordion .panel-body p { margin: 0; text-align: left;}
+
+.dropdown-menu { border: 0; }
+
+.modal-header { padding: 15px 20px; }
+
+#contact-form input[type="submit"] { margin-left: 135px; }
+#contact-form label { margin-right: 10px; text-align: right; width: 280px; }
