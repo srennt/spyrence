@@ -1,7 +1,47 @@
 <div class="container">
 <h1>Welcome</h1>
+<hr>
+  <div data-ride="carousel" class="carousel slide" id="myCarousel">
+
+  <ol class="carousel-indicators">
+    <li class="" data-slide-to="0" data-target="#myCarousel"></li>
+    <li data-slide-to="1" data-target="#myCarousel" class="active"></li>
+    <li data-slide-to="2" data-target="#myCarousel" class=""></li>
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="item active">
+      <img src="http://localhost:3000/images/medusa01.jpg" alt="">
+      <div class="container">
+        <p><button type="button" class="btn btn-default btn-lg">Shop the collection now!</button></p>
+      </div><!-- .container -->
+    </div><!-- .item -->
+
+    <div class="item">
+      <img src="http://localhost:3000/images/medusa02.jpg" alt="">
+      
+    </div><!-- .item -->
+
+    <div class="item">
+      <img src="http://localhost:3000/images/medusa03.jpg" alt="">
+      
+    </div><!-- .item -->
+
+  </div><!-- .carousel-inner -->
+
+  <a data-slide="prev" href="#myCarousel" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a data-slide="next" href="#myCarousel" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+</div><!-- .carousel -->
 
 <hr>
+
+<hr>
+
+<hr>
+
+<% feat_prod = Product.find(1) %>
 
 <%= render 'pages/featured_product' %>   
 
