@@ -3,5 +3,6 @@ class FormExampleController < ApplicationController
   end
 
   def form_output
+  	render text: params.inspect
   end
 end
