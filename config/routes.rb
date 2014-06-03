@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   
   get 'form_output',  to: 'form_example#form_output'
 
+  get 'contact_in',   to: 'contact#contact_in'
+  
+  get 'contact_out',  to: 'contact#contact_out'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
