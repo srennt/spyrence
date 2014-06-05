@@ -48,5 +48,4 @@ config.action_mailer.smtp_settings = {
     enable_starttls_auto: true
   }
 
-
 end
