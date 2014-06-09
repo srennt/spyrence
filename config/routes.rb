@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :products
 
-  resources :articles
+  resources :articles do
+  resources :comments
+  end
 
   get 'pages/landing_page'
 
