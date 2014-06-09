@@ -1,4 +1,4 @@
- <div class="container">
+<div class="container">
   
  <p>
   <strong>Title:</strong>
@@ -9,5 +9,8 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p> 
+
+<%= link_to 'Back', articles_path %>
+| <%= link_to 'Edit', edit_article_path(@article) %>
 
 </div>
