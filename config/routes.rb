@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :comments
   end
 
+  resources :reviews
+
   get 'pages/landing_page'
 
   get '/contact' => "pages#contact"
