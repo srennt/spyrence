@@ -2,14 +2,8 @@
   <nav>
       <ul class="nav">
         <li><%= link_to 'Home', pages_landing_page_path %></li>
-          <li class="dropdown">
-            <a href="#" id="nav-collections" class="dropdown-toggle" data-toggle="dropdown">Collections <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            <li><a href="MedusaMens.html">Men's Collections</a></li>
-            <li><a href="MedusaWomens.html">Women's Collections</a></li>
-            </ul>
-          </li>
-        <li><a href="#events" data-toggle="modal">Events</a><li>
+        <li><%= link_to 'Reviews', reviews_path %></li>
+        <li><%= link_to 'Blog', articles_path %></li>
         <li><%= link_to 'Contact', contact_path %></li>
         <li><%= link_to 'All Products', products_path %></li>
       </ul>
