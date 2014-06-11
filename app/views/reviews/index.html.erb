@@ -1,0 +1,21 @@
+<div class="container">
+
+<h2>All reviews</h2>
+ 
+<%= link_to 'New review', new_review_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Content</th>
+  </tr>
+ 
+<% @reviews.each do |review| %>
+  <tr>
+    <td><%= review.name %></td>
+    <td><%= review.text %></td>
+  </tr>
+<% end %>
+</table>
+
+</div>
