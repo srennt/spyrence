@@ -87,11 +87,10 @@ end
 describe "GET 'edit'" do
 
    before(:each) do 
-      post :create, {:product => {:name => "Mens 1",
-                                  :description => "flight jacket",
-                                  :image_url => "http://localhost:3000/images/mens1.jpg",
-                                  :price => "26"}}
-
+      product = Product.create(:name => "Mens 1",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26")
       get :edit, {:id => product.id}
   end
     
@@ -101,6 +100,74 @@ describe "GET 'edit'" do
 
   end
 
+describe "GET 'show'" do
+
+    it "should assign product as @product" do
+      product = Product.create(:name => "Mens 1",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26")
+      get :show, {:id => product.id}
+      assigns[:product].should eq(product)
+  end
+
+  end
+
+describe "PUT update" do
+
+context "with valid attributes" do  
+
+ it 'redirects to the updated product' do
+      product = Product.create(:name => "Mens 1",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26")
+      put :update, { :id => product.id, :product => {:name => "Mens new",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26"}}
+      response.should redirect_to(Product.last)
+    end  
+end
+
+context "with invalid attributes" do  
+
+ it 'redirects to the edit template' do
+      product = Product.create(:name => "Mens 1",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26")
+      put :update, { :id => product.id, :product => {:name => "",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26"}}
+      response.should render_template(:edit)
+    end  
+end
+
+end
+
+describe "DELETE destroy" do
+    it "destroys the requested product" do
+      product = Product.create(:name => "Mens 1",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26")
+      expect {
+        delete :destroy, {:id => product.id}
+      }.to change(Product, :count).by(-1)
+    end
+
+    it "redirects to the index products list" do
+      product = Product.create(:name => "Mens 1",
+                               :description => "black alpha flight jacket",
+                               :image_url => "http://localhost:3000/images/mens1.jpg",
+                               :price => "26")
+      
+        delete :destroy, {:id => product.id}
+      response.should redirect_to(products_url)   
+  end
+end
 end
 
 
