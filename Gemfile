@@ -14,6 +14,10 @@ group :production do
 end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'spork', '~> 1.0rc'
+  gem 'guard-spork'
 end 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
