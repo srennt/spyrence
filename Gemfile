@@ -53,4 +53,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem "factory_girl_rails", "~> 4.0"
+gem 'devise'
 
