@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   root to: 'pages#landing_page'
 
   resources :products
@@ -22,6 +23,8 @@ Rails.application.routes.draw do
   get 'contact_in',   to: 'contact#contact_in'
   
   get 'contact_out',  to: 'contact#contact_out'
+
+  
 
 
 
