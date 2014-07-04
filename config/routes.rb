@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :reviews
 
+  resources :users, only: [:edit, :update, :show]
+
   get 'pages/landing_page'
 
   get '/contact' => "pages#contact"
@@ -23,6 +25,7 @@ Rails.application.routes.draw do
   get 'contact_in',   to: 'contact#contact_in'
   
   get 'contact_out',  to: 'contact#contact_out'
+
 
   
 
