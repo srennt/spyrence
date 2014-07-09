@@ -3,7 +3,12 @@ require 'rails_helper'
 
 describe ProductsController do
 
+  include Devise::TestHelpers
 
+  before (:each) do
+    @user = FactoryGirl.create(:user)
+    sign_in @user
+    end
 
 describe 'GET #new' do
      it "creates a new product" do
