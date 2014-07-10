@@ -29,16 +29,15 @@ RSpec.describe UsersController, :type => :controller do
 
     before(:each) do
         @user.attributes = { :email => "bla@blabla.com",
-                  :password => "blablanew", 
-                  :password_confimation => "blablanew",
-                  :current_password => "blax123bla" }
-        @user.should_receive(:update_attributes).and_return(true)
+                  :username => "blabla", 
+                  :age => "23"}
       end
 
- it 'changes the password' do
+ it 'updates attributes' do
       put :update, :id => @user.id, :user => @user.attributes
-      response.should redirect_to '/'
-    end    
+      response.should redirect_to user_path
+    end  
+    
 
 end
 
