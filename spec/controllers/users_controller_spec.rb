@@ -28,7 +28,7 @@ RSpec.describe UsersController, :type => :controller do
   describe "PUT update" do 
 
     before(:each) do
-        @attr = { :email => "bla@blabla.com",
+        @user.attributes = { :email => "bla@blabla.com",
                   :password => "blablanew", 
                   :password_confimation => "blablanew",
                   :current_password => "blax123bla" }
@@ -36,7 +36,7 @@ RSpec.describe UsersController, :type => :controller do
       end
 
  it 'changes the password' do
-      put :update, :id => @user.id, :user => @attr
+      put :update, :id => @user.id, :user => @user.attributes
       response.should redirect_to '/'
     end    
 
