@@ -55,4 +55,6 @@ gem 'spring',        group: :development
 gem "factory_girl_rails", "~> 4.0"
 gem 'devise'
 gem 'cancancan'
+gem 'rails_admin'
+gem 'rollbar'
 
