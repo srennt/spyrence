@@ -10,11 +10,15 @@
     <th>Content</th>
   </tr>
  
+<% cache(cache_key_for_reviews) do %> 
 <% @reviews.each do |review| %>
+  <% cache(review) do %>
   <tr>
     <td><%= review.name %></td>
     <td><%= review.text %></td>
   </tr>
+<% end %>
+<% end %>
 <% end %>
 </table>
 
