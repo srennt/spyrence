@@ -57,4 +57,6 @@ gem 'devise'
 gem 'cancancan'
 gem 'rails_admin'
 gem 'rollbar'
+gem 'memcachier'
+gem 'dalli'
 
