@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
@@ -59,4 +61,5 @@ gem 'rails_admin'
 gem 'rollbar'
 gem 'memcachier'
 gem 'dalli'
+gem 'stripe'
 
