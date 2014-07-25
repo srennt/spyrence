@@ -1,6 +1,7 @@
 <div class="container">
 
 <p id="notice"><%= notice %></p>
+
 <table>
   <tr>
     <th><strong>Name:</strong></th>
@@ -24,6 +25,12 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+<hr>
+
+<%= form_tag "/payments/create" do %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
 
 <hr>
 
