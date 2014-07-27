@@ -61,5 +61,5 @@ gem 'rails_admin'
 gem 'rollbar'
 gem 'memcachier'
 gem 'dalli'
-gem 'stripe'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
