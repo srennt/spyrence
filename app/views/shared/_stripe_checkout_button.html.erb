@@ -1,7 +1,6 @@
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-image="/public/shared/medusa1.jpg"
   data-name="Medusa"
   data-description="<%=@product.description%> (<%=@product.price%> €)"
   data-currency="EUR"
