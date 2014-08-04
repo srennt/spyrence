@@ -4,5 +4,6 @@
   data-name="Medusa"
   data-description="<%=@product.description%> (<%=@product.price%> €)"
   data-currency="EUR"
-  data-amount="<%=@product.price*100%>">
+  data-amount="<%=(@product.price*100).to_i%>">
+  
 </script>
