@@ -18,6 +18,7 @@ class ReviewsController < ApplicationController
   end
 
   def index
+    debugger
     @reviews = Review.all
   end
 
