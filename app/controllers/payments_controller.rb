@@ -13,6 +13,8 @@ def create
     :description => 'Medusa Customer',
     :currency    => 'EUR'
   )
+
+  raise params.inspect
 end
 
 end
