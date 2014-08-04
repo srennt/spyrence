@@ -8,8 +8,6 @@ Rails.application.routes.draw do
 
   resources :products
 
-  resources :payments
-
   resources :articles do
   resources :comments
   end
@@ -31,6 +29,8 @@ Rails.application.routes.draw do
   get 'contact_in',   to: 'contact#contact_in'
   
   get 'contact_out',  to: 'contact#contact_out'
+
+  post 'payments/create'
 
 
   
