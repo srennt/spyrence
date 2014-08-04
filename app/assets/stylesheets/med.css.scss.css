@@ -36,3 +36,9 @@ body { margin: 0; }
 
 #contact-form input[type="submit"] { margin-left: 135px; }
 #contact-form label { margin-right: 10px; text-align: right; width: 280px; }
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
