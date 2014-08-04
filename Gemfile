@@ -62,4 +62,5 @@ gem 'rollbar'
 gem 'memcachier'
 gem 'dalli'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'debugger'
 
