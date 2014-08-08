@@ -18,17 +18,14 @@ def create
 
   puts params.inspect
 
-  params[:payment][:stripeToken] = charge.id
-  @payment = Payment.new(params[:payment])
-
   respond_to do |format|
-    if @payment.save
-      format.html { redirect_to '/payments/create' }
+    if charge.paid
+      format.html {}
       format.js   {}
-      format.json { render json: @payment, status: :created, location: @payment }
+      format.json { render json: @product, status: :created, location: @product }
     else
-      format.html { render action: "new" }
-      format.json { render json: @payment.errors, status: :unprocessable_entity }
+      format.html {}
+      format.json { render json: @product.errors, status: :unprocessable_entity }
     end
   end
 end
