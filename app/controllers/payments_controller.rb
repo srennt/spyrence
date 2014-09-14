@@ -30,4 +30,11 @@ def create
   end
 end
 
+def test_page
+respond_to do |format|
+format.html { render text: "html!"}
+format.json { render json: Product.first }
+end
+end
+
 end
