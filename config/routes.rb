@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   post 'payments/create'
 
+  get 'payments/test_page'
+
 
   
 
